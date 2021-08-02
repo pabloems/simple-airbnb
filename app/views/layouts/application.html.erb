@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="es">
 <html>
   <head>
     <title>RailsSimpleAirbnb</title>
@@ -10,6 +11,16 @@
   </head>
 
   <body>
+  <nav class="navbar navbar-light bg-light" >
+    <div class="container-fluid" id = "navbar">
+      <a class="navbar-brand">Simple Airbnb</a>
+      <form class="d-flex" >
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-outline-primary" type="submit">Add Flat</button>
+      </form>
+    </div>
+  </nav>
     <%= yield %>
   </body>
 </html>

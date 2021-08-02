@@ -11,3 +11,23 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+/*BARRA DE NAVEGACIÓN*/
+#navbar{
+  justify-content: space-between;
+}
+
+/*----------INDEX ---------*/
+.card {
+  display: inline-flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-radius: 1px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.7);
+}
+
+.details_flat{
+  display: flex;
+  margin: 10px;
+  justify-content: space-evenly;
+}

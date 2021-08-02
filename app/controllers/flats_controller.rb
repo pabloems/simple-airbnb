@@ -16,10 +16,11 @@ class FlatsController < ApplicationController
   def create
     @flat = Flat.new(flat_params)
 
-  if @flat.save
-    redirect_to @flats, notice: 'Flat was successfully created.'
-  else
-    render :new
+    if @flat.save
+      redirect_to @flats, notice: 'Flat was successfully created.'
+    else
+      render :new
+    end
   end
 
   def edit
@@ -44,4 +45,5 @@ class FlatsController < ApplicationController
   def set_flat
     @flat = Flat.find(params[:id])
   end
+
 end

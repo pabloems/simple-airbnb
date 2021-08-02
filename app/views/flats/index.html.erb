@@ -1,3 +1,27 @@
-<% @flats.each do |flat| %>
-  <%= flat.name %>
-<% end %>
+
+
+  <div class="container">
+  <h2>All our Flats</h2>
+  </div>
+
+<div class="container" id = "index_flat">
+  <%  @flats.each do |flat| %>
+  <div class="card" style="width: 18rem;">
+   <%= image_tag "depto1.jpg", alt:"Imagen de departamento" %>
+    <div class="card-body">
+      <h5 class="card-title"><%= flat.name %></h5>
+      <p class="card-text"><%= flat.description %></p>
+    </div>
+    <div class="details_flat">
+      <p><i class="fas fa-dollar-sign"></i><%= flat.price_per_night %></p>
+      <br/>
+      <p><i class="fas fa-users"></i><%= flat.number_of_guests %></p>
+    </div>
+    <div class="card-body">
+      <a class="card-link"><%= link_to  "More info", flat_path(flat) , {:class => "btn btn-outline-primary"}%></a>
+      <a class="card-link"><%= link_to  "Edit", edit_flat_path(flat) , {:class => "btn btn-outline-warning"}%></a>
+      <a class="card-link"><%= link_to  "Delete", flat_path(flat), method: :delete %></a>
+    </div>
+  </div>
+  <% end %>
+</div>
