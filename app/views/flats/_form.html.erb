@@ -1,37 +1,23 @@
 
 <div class="container">
   <h2>Edit flat</h2>
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Name</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  <%= simple_form_for(@flat) do |flat| %>
+  <%= flat.error_notification %>
+  <%= flat.error_notification message: flat.errors[:base].to_sentence if flat.object.errors[:base].present?%>
+
+  <div class="form-inputs">
+    <%= flat.input :name %>
+    <%= flat.input :address %>
+    <%= flat.input :description %>
+    <%= flat.input :price_per_night %>
+    <%= flat.input :number_of_guests %>
+    <%= flat.input :picture_url %> 
   </div>
 
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  <div class="form-actions">
+    <%= flat.button :submit , :class => "btn btn-primary"%>
+    <%= link_to  "Back", flat_path(flat), :class => "btn btn-danger" %>
   </div>
 
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Picture url</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-
-  <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Number of guests</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Price per night</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-
-
-
-
+<% end %>
 </div>
