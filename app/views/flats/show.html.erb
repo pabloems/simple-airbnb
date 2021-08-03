@@ -1,0 +1,61 @@
+
+<div class="banner">
+<%= image_tag "#{@flat.picture_url}", alt:"Imagen de departamento" %>
+</div>
+
+
+<div class="container margin_top_negative">
+  <div class="row">
+    <div class="col-8">
+      <div class="container">
+        <div class="main_information">
+          <h1><%= @flat.name %></h1>
+          <h2><%= @flat.address %></h2>
+        </div>
+        <div class="main_information" >
+          <h2>Más información</h2>
+          <p><%= @flat.description %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+    <%= simple_form_for(@flat) do |flat| %>
+      <%= flat.error_notification %>
+      <%= flat.error_notification message: flat.errors[:base].to_sentence if flat.object.errors[:base].present?%>
+    
+      <div class="main_information" id = "details_show">
+        <h2>Book this place!</h2>
+          <%= form_tag("/search", method: "get") do %>
+            <%= label_tag(:q, "From:") %>
+            <%= text_field_tag(:q) %>
+            <%= label_tag(:q, "To:") %>
+            <%= text_field_tag(:q) %>
+            <br/>
+          <a class = "btn btn-success">"Book" </a>
+          <% end %>
+      </div>
+
+      <div class="main_information" id = "details_show">
+        <h2>Details</h2>
+        <div class="flat_information">
+          <a> <i class="fas fa-dollar-sign"></i><%= @flat.price_per_night %> </a>
+          <a><i class="fas fa-users"></i><%= @flat.number_of_guests %></a>
+        </div>
+      </div>
+
+      <div class="main_information" id= "details_show">
+        <div class="social_media">
+          <h4>Share</h6>
+          <div class="flex">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-pinterest-square"></i>
+            <i class="fab fa-whatsapp-square"></i>
+          </div>
+        </div>
+      </div>
+    <% end %>
+   </div>
+</div>
+
