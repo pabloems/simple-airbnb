@@ -1,6 +1,5 @@
-
-<div class="banner">
-<%= image_tag "#{@flat.picture_url}", alt:"Imagen de departamento" %>
+<div class="">
+  <%= image_tag "#{@flat.picture_url}", alt:"Imagen de departamento", class: "banner" %>
 </div>
 
 
@@ -36,22 +35,22 @@
           <% end %>
       </div>
 
-      <div class="main_information" id = "details_show">
+      <div class="main_information ">
         <h2>Details</h2>
-        <div class="flat_information">
-          <a> <i class="fas fa-dollar-sign"></i><%= @flat.price_per_night %> </a>
-          <a><i class="fas fa-users"></i><%= @flat.number_of_guests %></a>
+        <div class="flat_information ">
+          <a ><i class="fas fa-users "></i><%= @flat.number_of_guests %></a>
+          <a><i class="fas fa-dollar-sign "></i><%= @flat.price_per_night %> </a>
         </div>
       </div>
 
-      <div class="main_information" id= "details_show">
+      <div class="main_information ">
         <div class="social_media">
           <h4>Share</h6>
-          <div class="flex">
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-twitter-square"></i>
-            <i class="fab fa-pinterest-square"></i>
-            <i class="fab fa-whatsapp-square"></i>
+          <div class="d-flex">
+            <i class="fab fa-facebook-square fa-2x"></i>
+            <i class="fab fa-twitter-square fa-2x"></i>
+            <i class="fab fa-pinterest-square fa-2x"></i>
+            <i class="fab fa-whatsapp-square fa-2x"></i>
           </div>
         </div>
       </div>

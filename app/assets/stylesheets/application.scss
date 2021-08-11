@@ -12,32 +12,13 @@
 @import "components/index";
 @import "pages/index";
 
-/*BARRA DE NAVEGACIÓN*/
-#navbar{
-  justify-content: space-between;
-}
-
-/*----------INDEX ---------*/
-
-.card {
-  justify-content: space-between;
-  border-radius: 1px;
-  box-shadow: 0 0 2px rgba(0,0,0,0.9);
-  height: 100%;
-  width: 30%;
-  margin: 15px;
-  .card-body{
-    background-color: #f8f8f8;
-    font-weight: 2rem;
-  }
-}
-
 
 /*SHOW- PAGINA PRODUCTO*/
 .banner{
-  width: 100%;
-  background-position: center;
-  background-size: cover;
+  margin-top: -24px;
+  object-fit: cover;
+  width: 100vw;
+  height: 450px;
   background-image: url({@flat.picture_url});
 }
 
@@ -52,6 +33,11 @@
   margin-left: 15px;
 }
 
+.flat_information {
+  font-weight: 10px;
+}
+
+
 .main_information {
   border-radius: 3px;
   padding: 20px;
@@ -59,10 +45,6 @@
   box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
   background: #F8F9FA;
   display: grid;
-}
-
-.flex{
-  display: flex;
 }
 
 .social_media{

@@ -2,3 +2,20 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+
+
+
+/*----------INDEX ---------*/
+
+.card {
+  justify-content: space-between;
+  border-radius: 1px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.9);
+  height: 100%;
+  width: 30%;
+  margin: 15px;
+  .card-body{
+    background-color: #f8f8f8;
+    font-weight: 2rem;
+  }
+}
